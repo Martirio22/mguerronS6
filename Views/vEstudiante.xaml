@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mguerronS6.Views.vEstudiante"
+             Title="vEstudiante">
+    <VerticalStackLayout>
+        <Label 
+            Text="Semana 6 Crud Estudiantes"
+            VerticalOptions="Center" 
+            FontSize="20"
+            HorizontalOptions="Center" />
+        <Grid ColumnDefinitions="*,*,*,*"
+              BackgroundColor="LightBlue"
+              Padding="10">
+
+            <Label Grid.Column="0" Text="Código" FontAttributes="Bold" />
+            <Label Grid.Column="1" Text="Nombre" FontAttributes="Bold" />
+            <Label Grid.Column="2" Text="Apellido" FontAttributes="Bold" />
+            <Label Grid.Column="3" Text="Edad" FontAttributes="Bold" />
+
+        </Grid>
+
+        <ListView x:Name="listaEstudiantes"
+                  VerticalOptions="FillAndExpand"
+                  RowHeight="50">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnDefinitions="*,*,*,*"
+                              Padding="10">
+
+                            <Label Grid.Column="0"
+                                   Text="{Binding codigo}" />
+
+                            <Label Grid.Column="1"
+                                   Text="{Binding nombre}" />
+
+                            <Label Grid.Column="2"
+                                   Text="{Binding apellido}" />
+
+                            <Label Grid.Column="3"
+                                   Text="{Binding edad}" />
+
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        
+        
+        
+    </VerticalStackLayout>
+</ContentPage>
