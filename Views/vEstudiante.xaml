@@ -22,7 +22,7 @@
 
         <ListView x:Name="listaEstudiantes"
                   VerticalOptions="FillAndExpand"
-                  RowHeight="50">
+                  RowHeight="50" ItemSelected="listaEstudiantes_ItemSelected">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -49,8 +49,10 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        
-        
-        
+
+        <Button x:Name="btnAgregar"
+                Text="Agregar Estdiante"
+                Clicked="btnAgregar_Clicked" />
+
     </VerticalStackLayout>
 </ContentPage>
